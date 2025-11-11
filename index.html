@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier de l'Avent 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎄 Calendrier de l'Avent 2025 🎄</h1>
+            <div class="countdown" id="countdown">
+                <p>Prochaine case disponible dans :</p>
+                <div class="countdown-timer" id="countdownTimer">
+                    <span id="hours">00</span>h 
+                    <span id="minutes">00</span>m 
+                    <span id="seconds">00</span>s
+                </div>
+            </div>
+        </header>
+
+        <div class="calendar-grid" id="calendarGrid">
+            <!-- Les cases seront générées par JavaScript -->
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeButton">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle">Jour 1</h2>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Le contenu sera inséré ici -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Effet de neige -->
+    <div class="snow-container" id="snowContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

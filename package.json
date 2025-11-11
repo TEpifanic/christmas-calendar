@@ -1,0 +1,20 @@
+{
+  "name": "christmas-calendar",
+  "version": "1.0.0",
+  "description": "Calendrier de l'Avent interactif",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000 || python3 -m http.server 8000",
+    "start": "python -m http.server 8000 || python3 -m http.server 8000"
+  },
+  "keywords": [
+    "calendar",
+    "advent",
+    "christmas",
+    "noel"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+
+
