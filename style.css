@@ -184,9 +184,9 @@ h1 {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     padding: 0;
     border-radius: 20px;
-    max-width: 600px;
+    max-width: 1200px;
     width: 90%;
-    max-height: 80vh;
+    max-height: 90vh;
     overflow: hidden;
     position: relative;
     animation: slideIn 0.3s ease;
@@ -233,6 +233,7 @@ h1 {
     background: rgba(255, 255, 255, 0.1);
     padding: 30px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
 }
 
 .modal-header h2 {
@@ -244,7 +245,7 @@ h1 {
 .modal-body {
     padding: 30px;
     overflow-y: auto;
-    max-height: calc(80vh - 150px);
+    max-height: calc(90vh - 150px);
 }
 
 .modal-body::-webkit-scrollbar {
@@ -352,6 +353,25 @@ h1 {
     .day-number {
         font-size: 1.5rem;
     }
+}
+
+/* Styles pour la carte Leaflet */
+#restaurant-map {
+    z-index: 1;
+}
+
+#restaurant-map .leaflet-container {
+    background: rgba(30, 60, 114, 0.5);
+}
+
+#restaurant-map .leaflet-popup-content-wrapper {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    border-radius: 10px;
+}
+
+#restaurant-map .leaflet-popup-tip {
+    background: #2a5298;
 }
 
 
