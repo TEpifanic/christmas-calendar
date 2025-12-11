@@ -136,8 +136,15 @@ const dayContents = [
     {
         title: "Jeudi 11 décembre",
         content: `
-            <h3>TU as gagné un bon pour le plaisir de ton choix !</h3>
+            <h3>Tu as gagné un bon pour le plaisir de ton choix !</h3>
             <p>Un lieu, un espace, un moment, une action, laisse libre court à ton imagination et demande-moi absolument tout ce que tu veux : je suis à toi...</p>
+            <p>Voici une petite liste de propositions pour t'aider à faire ton choix :</p>
+            <ul>
+                <li>Un massage normal de prime abord, mais qui se révèlera plus sensuel qu'il n'y paraît...</li>
+                <li>Une utilisation originale de mes talents... linguistiques : où tu veux, quand tu veux</li>
+                <li>Une nouvelle position</li>
+                <li>Un date torride en dehors de la maison : pas de sous-vêtements, un toucher discret régulier, un bon verre de vin avant de rentrer à la maison</li>
+            </ul>
         `
     },
     {
@@ -155,7 +162,7 @@ const dayContents = [
                 <p><strong>Question 1 : </strong>Qu'est-ce ou qui est-ce que j'aime le plus au monde ?</p>
                 <p><strong>Question 2 : </strong>Quel est le meilleur animé du monde ?</p>
                 <p><strong>Question 3 : </strong>Quel est mon personnage favori dans League of Legends ?</p>
-                <p><strong>Question 4 : </strong>Quel est mon plus gros talent ?</p>
+                <p><strong>Question 4 : </strong>Quel est mon plus grand talent ?</p>
             </div>
             <p style="margin-top: 20px;">Maintenant on va compter les points 😈</p>
         `
