@@ -223,7 +223,7 @@ const dayContents = [
                 </div>
                 <div style="border-left: 3px solid #ffd700; padding-left: 20px; margin-bottom: 30px;">
                     <h4 style="color: #ffd700;">Emménagement ensemble</h4>
-                    <p><em>Le 4 octobre, un jour particulièrement spécial car il représente un foyer commun et un nouveau chapitre de notre couple</em></p>
+                    <p><em>Le 4 octobre 2024, un jour particulièrement spécial car il représente un foyer commun et un nouveau chapitre de notre couple</em></p>
                 </div>
                 <div style="border-left: 3px solid #ffd700; padding-left: 20px;">
                     <h4 style="color: #ffd700;">Bientôt</h4>
