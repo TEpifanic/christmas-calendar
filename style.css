@@ -355,6 +355,137 @@ h1 {
     }
 }
 
+/* Section case bonus */
+.bonus-section {
+    margin-top: 50px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.bonus-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 400px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.5), transparent);
+}
+
+.bonus-day {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(145deg, rgba(255, 140, 0, 0.3), rgba(255, 69, 0, 0.2));
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px dashed rgba(255, 215, 0, 0.6);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.3);
+}
+
+.bonus-day::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+.bonus-day:hover::before {
+    transform: translateX(100%);
+}
+
+.bonus-day:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 40px rgba(255, 140, 0, 0.6);
+    border-color: #ffd700;
+}
+
+.bonus-icon {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.bonus-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 5px;
+}
+
+.bonus-subtitle {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    text-align: center;
+    padding: 0 15px;
+}
+
+/* Responsive pour la case bonus */
+@media (max-width: 768px) {
+    .bonus-section {
+        margin-top: 40px;
+        padding: 20px;
+    }
+    
+    .bonus-day {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .bonus-icon {
+        font-size: 2.5rem;
+    }
+    
+    .bonus-title {
+        font-size: 1.1rem;
+    }
+    
+    .bonus-subtitle {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bonus-day {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .bonus-icon {
+        font-size: 2rem;
+    }
+    
+    .bonus-title {
+        font-size: 1rem;
+    }
+}
+
 /* Styles pour la carte Leaflet */
 #restaurant-map {
     z-index: 1;

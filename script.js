@@ -152,6 +152,15 @@ const dayContents = [
         content: `
             <h3>Tu as gagné un bon pour une sortie à la patinoire !</h3>
             <p>Prépare-toi à glisser parce qu'on va tenter des trucs sympas 😎</p>
+            <p>Mais... Dans le cas où nous ne nous senterions pas assez en forme, voici une liste de restaurants que je te propose, en remettant la patinoire à la prochaine occasion :</p>
+            <ul>
+                <li>Le Potager de Charlotte (tu connais déjà il me semble 😝)</li>
+                <li>Qasti Bistrot, un restaurant libanais entièrement végétarien</li>
+                <li>Tekés, "une ode au végétal et aux cuissons ancestrales de Jérusalem"</li>
+                <li>Mannie, de la street-food végétarienne, des burgers de qualité à manger sur place ou à emporter</li>
+                <li>Breathe, un restaurant de sushis végans</li>
+            </ul>
+            <p>Alors, tu as un coup de foudre ? Sinon, je réserve pour nous et je te fais la surprise 😊</p>
         `
     },
     {
@@ -298,6 +307,44 @@ const dayContents = [
 // État du calendrier (sauvegardé dans localStorage)
 let openedDays = JSON.parse(localStorage.getItem('openedDays')) || [];
 
+// Contenu de la boîte à reports
+const bonusContent = {
+    title: "📦 Boîte à reports",
+    content: `
+        <p style="margin-bottom: 25px; font-style: italic; opacity: 0.9;">Ici se trouvent les défis /actions / bons ou autre qui n'ont pas encore été faits / utilisés à la date prévue - à faire / utiliser quand tu veux !</p>
+        
+        <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #ffd700; margin-bottom: 15px;">
+            <h4 style="color: #ffd700; margin-bottom: 10px;">Tu as gagné un bon pour un restaurant de ton choix !</h4>
+            <p style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 10px;"><em>Initialement prévu pour le 5 décembre</em></p>
+            <p>Là où ton ventre te guidra, nous nous rendrons</p>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #ffd700; margin-bottom: 15px;">
+            <h4 style="color: #ffd700; margin-bottom: 10px;">Challenge spécial</h4>
+            <p style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 10px;"><em>Initialement prévu pour le 7 décembre</em></p>
+            <p>Aujourd'hui, on va devoir réaliser une bonne action : donner à un SDF ou aider quelqu'un de manière générale, complimenter un inconnu ou appeler quelqu'un qu'on doit appeler depuis longtemps</p>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #ffd700; margin-bottom: 15px;">
+            <h4 style="color: #ffd700; margin-bottom: 10px;">Recette de cuisine</h4>
+            <p style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 10px;"><em>Initialement prévu pour le 8 décembre</em></p>
+            <p>À réaliser seul ou à deux</p>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #ffd700; margin-bottom: 15px;">
+            <h4 style="color: #ffd700; margin-bottom: 10px;">Tu as gagné un bon pour le plaisir de ton choix !</h4>
+            <p style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 10px;"><em>Initialement prévu pour le 11 décembre</em></p>
+            <p>Un lieu, un espace, un moment, une action, laisse libre court à ton imagination et demande-moi absolument tout ce que tu veux : je suis à toi...</p>
+        </div>
+        
+        <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #ffd700; margin-bottom: 15px;">
+            <h4 style="color: #ffd700; margin-bottom: 10px;">Tu as gagné un bon pour une sortie à la patinoire !</h4>
+            <p style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 10px;"><em>Initialement prévu pour le 12 décembre</em></p>
+            <p>Prépare-toi à glisser parce qu'on va tenter des trucs sympas 😎</p>
+        </div>
+    `
+};
+
 // Initialisation
 document.addEventListener('DOMContentLoaded', () => {
     createCalendar();
@@ -305,6 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateCountdown, 1000);
     createSnowfall();
     setupModal();
+    setupBonusDay();
 });
 
 // Créer le calendrier
@@ -558,5 +606,22 @@ function createSnowfall() {
         
         snowContainer.appendChild(snowflake);
     }
+}
+
+// Configuration de la case bonus
+function setupBonusDay() {
+    const bonusDay = document.getElementById('bonusDay');
+    bonusDay.addEventListener('click', openBonusDay);
+}
+
+// Ouvrir la boîte à reports
+function openBonusDay() {
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    
+    modalTitle.textContent = bonusContent.title;
+    modalBody.innerHTML = bonusContent.content;
+    modal.classList.add('show');
 }
 
