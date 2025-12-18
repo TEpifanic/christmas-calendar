@@ -246,6 +246,10 @@ const dayContents = [
         content: `
             <h3>Tu as gagné un bon pour un bain relaxant</h3>
             <p>Bougies, musique douce, bulles... Je m'occupe de tout pour que tu puisses te détendre</p>
+            <p>Voici un aperçu de ce qui t'attend :</p>
+            <i>The girl in the whirlwind</i><br>
+            <i>Laissez-vous emporter dans un tourbillon absolu de vanille sucrée, de sel marin adoucissant et de folklore bulgare. Avec un peu de courage et un cœur chaleureux, le printemps reviendra.</i><br>
+            <p>N'hésite pas à venir réclamer ton bien</p>
         `
     },
     {
