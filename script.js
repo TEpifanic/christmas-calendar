@@ -316,12 +316,6 @@ const bonusContent = {
     title: "📦 Boîte à reports",
     content: `
         <p style="margin-bottom: 25px; font-style: italic; opacity: 0.9;">Ici se trouvent les défis /actions / bons ou autre qui n'ont pas encore été faits / utilisés à la date prévue - à faire / utiliser quand tu veux !</p>
-        
-        <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #ffd700; margin-bottom: 15px;">
-            <h4 style="color: #ffd700; margin-bottom: 10px;">Tu as gagné un bon pour un restaurant de ton choix !</h4>
-            <p style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 10px;"><em>Initialement prévu pour le 5 décembre</em></p>
-            <p>Là où ton ventre te guidra, nous nous rendrons</p>
-        </div>
 
         <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #ffd700; margin-bottom: 15px;">
             <h4 style="color: #ffd700; margin-bottom: 10px;">Challenge spécial</h4>
@@ -345,6 +339,18 @@ const bonusContent = {
             <h4 style="color: #ffd700; margin-bottom: 10px;">Tu as gagné un bon pour une sortie à la patinoire !</h4>
             <p style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 10px;"><em>Initialement prévu pour le 12 décembre</em></p>
             <p>Prépare-toi à glisser parce qu'on va tenter des trucs sympas 😎</p>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #ffd700; margin-bottom: 15px;">
+            <h4 style="color: #ffd700; margin-bottom: 10px;">Tu as gagné un bon pour un bain relaxant !</h4>
+            <p style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 10px;"><em>Initialement prévu pour le 12 décembre</em></p>
+            <p>Bougies, musique douce, bulles... Je m'occupe de tout pour que tu puisses te détendre</p>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #ffd700; margin-bottom: 15px;">
+            <h4 style="color: #ffd700; margin-bottom: 10px;">Tu as gagné un bon pour un massage !</h4>
+            <p style="opacity: 0.8; font-size: 0.9rem; margin-bottom: 10px;"><em>Initialement prévu pour le 12 décembre</em></p>
+            <p>Un moment de détente rien que pour toi : bougies, musique et huile de massage à profusion</p>
         </div>
     `
 };
